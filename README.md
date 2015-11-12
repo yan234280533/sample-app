@@ -6,7 +6,7 @@
 mvn clean package
 ```
 
-## Start the app
+## Start
 
 ``` bash
 java -jar target/app.jar
