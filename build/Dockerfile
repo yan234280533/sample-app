@@ -12,8 +12,8 @@ RUN echo "$TIME_ZONE" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
 RUN git clone https://github.com/yan234280533/sample-app.git /tmp/sample-app
-RUN mvn -X -f /tmp/sample-app/pom.xml clean package
-RUN cp /tmp/sample-app/target/app.jar /app/app.jar
+RUN mvn -X -f ./pom.xml clean package
+RUN cp ./target/app.jar /app/app.jar
 
 WORKDIR /app
 
