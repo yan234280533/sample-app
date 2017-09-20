@@ -11,7 +11,9 @@ ENV SPRING_PROFILES_ACTIVE test
 RUN echo "$TIME_ZONE" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
-mvn -X -f ./pom.xml clean package && cp ./target/app.jar /app/app.jar
+ADD pom.xml /source/pom.xml
+ADD src /source/src
+RUN cd /source && mvn -X clean package && mkdir -p /app && cp ./target/app.jar /app/app.jar
 
 WORKDIR /app
 
