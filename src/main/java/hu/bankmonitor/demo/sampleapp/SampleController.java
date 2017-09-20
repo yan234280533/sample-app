@@ -10,7 +10,7 @@ public class SampleController {
 	@SuppressWarnings("static-method")
 	public String status() {
 
-		return "OK-02";
+		return "OK-03";
 	}
 
 }
