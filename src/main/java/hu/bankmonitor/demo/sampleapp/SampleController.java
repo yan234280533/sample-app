@@ -9,8 +9,8 @@ public class SampleController {
 	@RequestMapping("/status")
 	@SuppressWarnings("static-method")
 	public String status() {
-
-		return "OK-03";
+        System.out.println("00000");
+		return "OK-111";
 	}
 
 }
